@@ -1,6 +1,8 @@
 const Book = require('../models/Book')
 
 exports.createBook = (req, res, next) => {
+  console.log("okok");
+  
     delete req.body._id;
     const book = new Book ({
       ...req.body
